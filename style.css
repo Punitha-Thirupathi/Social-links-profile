@@ -1,0 +1,101 @@
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --DarkGrey: hsl(0, 0%, 12%);
+  --OffBlack: hsl(0, 0%, 8%);
+}
+@font-face {
+  font-family: myfontsBold;
+  src: url(./assets/fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: myfontRegular;
+  src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: myfontSemiBold;
+  src: url(./assets/fonts/static/Inter-SemiBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myfontsBold;
+}
+body {
+  font-size: 14px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--OffBlack);
+  display: flex;
+  color: var(--White);
+}
+.card {
+  max-width: 420vw;
+  background-color: var(--DarkGrey);
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+.card-img {
+  padding: 20px;
+  text-align: center;
+}
+.card-img img {
+  width: 30%;
+  border-radius: 50%;
+}
+.card-content {
+  text-align: center;
+}
+h2 {
+  margin-top: 15px;
+  font-weight: 700;
+}
+p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--Green);
+  font-weight: 600;
+}
+.para {
+  margin-top: 20px;
+  color: var(--White);
+  font-family: myfontSemiBold;
+}
+.card-body {
+  padding: 20px;
+  display: column;
+  grid-template-columns: repeat(5, 1fr);
+}
+.card-body .box,
+.box a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  color: var(--White);
+  font-family: myfontRegular;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.card-body .box {
+  background-color: var(--Grey);
+}
+
+.card-body .box:hover,
+.box a:hover {
+  cursor: pointer;
+  background-color: var(--Green);
+  color: var(--OffBlack);
+}
+
+@media only screen and (max-width: 425px) {
+
+  .card {
+    max-width: 360vw;
+  }
+}
